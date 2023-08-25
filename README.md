@@ -1,3 +1,4 @@
 # weather_app
 
-A new Flutter project.
+Final project for a flutter summer course. 
+Might come to use it to learn more about back-end development.
