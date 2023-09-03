@@ -91,7 +91,7 @@ class _WeatherHomeState extends State<WeatherHome> {
 
   Future<String> getLocation(lat, lon) async {
     final response = await http.get(Uri.parse(
-        'http://api.openweathermap.org/geo/1.0/reverse?lat=$lat&lon=$lon&limit=2&appid=a18a5bb63cf2e927db208380370795ff'));
+        'http://api.openweathermap.org/geo/1.0/reverse?lat=$lat&lon=$lon&limit=2&appid=${API-KEY}'));
     final jsonData = jsonDecode(response.body);
 
     return "${jsonData[0]["name"]},${jsonData[0]['country']}";
@@ -99,7 +99,7 @@ class _WeatherHomeState extends State<WeatherHome> {
 
   Future<List<String>> getWeather(lat, lon) async {
     final response = await http.get(Uri.parse(
-        "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&units=metric&appid=a18a5bb63cf2e927db208380370795ff"));
+        "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&units=metric&appid=${API-KEY}"));
     final jsonData = jsonDecode(response.body);
 
     List<String> weather = [];
@@ -116,7 +116,7 @@ class _WeatherHomeState extends State<WeatherHome> {
 
   Future<String> getForecast(lat, lon) async {
     final response = await http.get(Uri.parse(
-        "https://api.openweathermap.org/data/2.5/forecast?lat=$lat&lon=$lon&units=metric&appid=a18a5bb63cf2e927db208380370795ff"));
+        "https://api.openweathermap.org/data/2.5/forecast?lat=$lat&lon=$lon&units=metric&appid=${API-KEY}"));
 
     return response.body;
   }
@@ -419,7 +419,7 @@ class AboutTab extends StatelessWidget {
 
 // Weather Scenes
 // Från paketet https://pub.dev/packages/weather_animation
-// Skapadei https://packruble.github.io/weather_animation/#/
+// Skapade i https://packruble.github.io/weather_animation/#/
 class ClearSky extends StatelessWidget {
   const ClearSky({super.key});
 
