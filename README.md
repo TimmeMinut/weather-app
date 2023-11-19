@@ -1,8 +1,9 @@
 # weather_app
 
-Final project for a flutter summer course at Linnaeus University 
-Takes data from the OpenWeatherMap API and displays it as both a current weather tab and a forecast tab.
-Custom backgrounds dependent on the weather using the weather_animation flutter package.
+Final project for a flutter summer course at Linnaeus University.
+
+Fetches data from the OpenWeatherMap API for the users current location and displays it in a forecast tab for the coming 5 days in 3 hour increments.
+Also displays the current weather with animated backgrounds relating to the currentconditions, using the weather_animation package.
 
 Preview images:
 
